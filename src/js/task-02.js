@@ -7,17 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-
 const allIng = document.querySelector("#ingredients");
+const newList = ingredients.map((ingredient) => `<li class="item">${ingredient}</li>`).join("");
+allIng.insertAdjacentHTML("afterbegin", newList);
 console.log(allIng);
-
-const arrayList = []
-ingredients.forEach(ing => {
-let liItem = document.createElement("li");
-liItem.classList.add("item");
-liItem.textContent = ing;
-console.log(liItem);
-  arrayList.push(liItem)
-
-})
-allIng.append(...arrayList);
