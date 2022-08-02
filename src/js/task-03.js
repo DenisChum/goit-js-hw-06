@@ -15,6 +15,13 @@ const images = [
 
 
 const imagesList = document.querySelector(".gallery");
-const markup = images.map((image) => `<li class = "picture"><img src="${image.url}" alt="${image.alt}" width ="400"/></li>`).join("");
+const markup = images.map((image) => `<li class = "picture"><img src="${image.url}" alt="${image.alt}" width ="500"/></li>`).join("");
 imagesList.insertAdjacentHTML("afterbegin", markup);
 console.log(imagesList)
+
+
+imagesList.style.display = 'flex';
+imagesList.style.flexWrap = 'nowrap';
+imagesList.style.listStyle = 'none';
+imagesList.style.gap = '40px';
+imagesList.style.justifyContent = 'center';
