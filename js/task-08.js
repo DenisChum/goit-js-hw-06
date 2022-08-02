@@ -8,7 +8,7 @@ function handlerSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("Please enter a valid input");
   }
-  const object = new FormData(formElement);
-  object.forEach((elem) => console.log(elem));
+  const object =  { email: email.value, Password: password.value };
+  console.log(object);
   event.target.reset();
 }
