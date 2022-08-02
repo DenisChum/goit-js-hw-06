@@ -1,14 +1,13 @@
-const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments']
 
-const allIng = document.querySelector("#ingredients");
-const newList = ingredients.map((ingredient) =>`<li class="item">${ingredient}</li>`).join("");
-allIng.insertAdjacentHTML("afterbegin", newList);
-console.log(allIng);
+const list = document.querySelector('#ingredients')
+const liArray = []
 
+ingredients.forEach(ingredient => {
+	const item = document.createElement('li')
+	item.className = 'item'
+	item.textContent = ingredient
+	liArray.push(item)
+})
+
+list.append(...liArray)
